@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px auto;
+    font-size: 74px;
+    font-weight: bold;
+    color: #5fa4e1;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    border: 2px solid grey;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 15px;
+    justify-content: center;
+}
+
+.col-3 {
+    padding: 10px;
+    max-width: 25%;
+    flex: 0 0 25%;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #020202;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+.card-body {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+.container-cards{
+    margin: 30px;
+}
+
+.container1 {
+    width: 40%;
+    margin: 10px;
+    padding: 10px ;
+    display: flex;
+    justify-content: end;
+}
+
+.search {
+    width: 80%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #28772c;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+#modalImage{
+    height: 100%;
+    max-width: 500px;
+    border: 3px solid #020202;
+    border-radius: 14px;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.modal-title {
+
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    display: flex;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+}
+
+
+.instruction-block{
+    padding: 20px;
+    border-top: 2px solid #0b0909;: ;
+}
+
+.instruction-block p{
+font-size: 16px;
+    color: #0559a8;
+}
+
+
+.instruction-block h4{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto;
+}
+
+
+.ingredient-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px ;
+    font-size: 16px;
+    font-family: 'Berlin Sans FB';
+    border-bottom: 2px solid #020202;
+}
+
+.ingredient-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 18px;
+}
+
+.ingredient-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+
+.letter-buttons button {
+    margin: 5px;
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.letter-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+footer {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.filter-block{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.btn-filter{
+    padding: 10px ;
+    margin: 15px 0;
+
+}
+
+.btn-open-filter {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-open-filter:hover {
+    background-color: #0056b3;
+}
+
